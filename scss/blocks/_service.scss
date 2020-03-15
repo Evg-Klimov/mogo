@@ -1,0 +1,145 @@
+.service {
+
+	&__content {
+		max-width: 1220px;
+		width: 100%;
+		padding: 100px 10px 115px 10px;
+		@include auto;
+
+		@media all and (max-width: 590px) {
+			padding: 70px 10px 85px 10px;
+		}
+	}
+
+	&__section-title {
+		margin-bottom: 95px;
+	}
+
+	&__info-contiener {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media all and (max-width: 930px) {
+			flex-direction: column;
+			justify-content: center;
+		}
+	}
+
+	&__block-img {
+		width: 570px;
+		height: 380px;
+		margin-right: 30px;
+		position: relative;
+
+		@media all and (max-width: 930px) {
+			width: initial;
+			height: initial;
+			margin-right: 0;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		@media all and (max-width: 930px) {
+			position: relative;
+		}
+	}
+
+	&__description {
+		width: 595px / 1200px * 100%;
+
+		@media all and (max-width: 930px) {
+			width: 570px;
+		}
+
+		@media all and (max-width: 590px) {
+			width: 100%;
+		}
+	}
+
+	&__description-conteiner {
+		margin-bottom: 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:hover .service__dropdown-text{
+			max-height: 183px;
+			visibility: visible;
+		}
+
+		&:hover .service__arrow {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__section-heading {
+		padding: 20px 0 20px 60px;
+		position: relative;
+		border: 1px solid #e5e5e5;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+
+	&__icon {
+		@include font-size(30);
+		position: absolute;
+		left: 15px;
+		line-height: 15px;
+	}
+	
+	&__arrow {
+		position: absolute;
+		right: 20px;
+		top: 14px;
+		transition: transform .3s linear;
+		transform-origin: center;
+		font-size: 20px;
+		color: #ccc;
+	}
+
+	&__dropdown-text {
+		overflow-y: auto;
+		max-height: 0;
+		visibility: hidden;
+		transition: max-height .3s linear, visibility .3s linear;
+		border: 1px solid #e5e5e5;
+		border-top: none;
+		
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $soft-cyan;
+			border-radius: 2.5px;
+		}
+
+		&::-webkit-scrollbar-track-piece {
+			background-color: #f5f5f5;
+		}
+	}
+
+	&__dropdown-inner {
+		padding: 25px 20px 25px 20px;
+	}
+
+	&__text-page {
+		margin-bottom: 10px;
+		
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

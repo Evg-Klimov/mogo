@@ -1,0 +1,112 @@
+.preview {
+	color: $white-color;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+
+	@media all and (max-width: 1024px) {
+		padding-bottom: 35px;
+	}
+
+	&__title-conteiner {
+		margin-bottom: 124px;
+	}
+
+	&__main-title {
+		position: relative;
+		max-width: 950px;
+		line-height: 0.933;
+
+		@media all and (max-width: 1024px) {
+			@include font-size(90);
+			max-width: 550px;
+		}
+
+		@media all and (max-width: 550px) {
+			@include font-size(50);
+			max-width: 260px;
+			line-height: 1.4;
+		}
+
+		&::after {
+			@include pseudo;
+			width: 60px;
+			height: 3px;
+			background-color: $white-color;
+			bottom: -71px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__btn-conteiner {
+		margin-bottom: 130px;
+	}
+}
+
+//* SLIDER *//
+
+.swiper-pagination-bullet {
+	width: 280px;
+	height: 3px;
+	border-radius: 0;
+	opacity: 0.502;
+	background-color: $white-color;
+	position: relative;
+
+	@media all and (max-width: 1260px) {
+		width: 180px;
+	}
+
+	@media all and (max-width: 780px) {
+		width: 90px;
+	}
+
+	@media all and (max-width: 490px) {
+		width: 67px;
+	}
+
+	&::after {
+		position: absolute;
+		left: 0;
+		top: -30px;
+
+		@media all and (max-width: 490px) {
+			font-size: 12px;
+			top: -20px;
+		}
+	}
+
+	&:nth-child(1)::after {
+		content: "01 Intro";
+	}
+
+	&:nth-child(2)::after {
+		content: "02 Work";
+	}
+
+	&:nth-child(3)::after {
+		content: "03 About";
+	}
+
+	&:nth-child(4)::after {
+		content: "04 Contacts";
+	}
+
+	&::before {
+		@include pseudo;
+		transition: width .2s linear .2s;
+		width: 0px;
+		height: inherit;
+		background-color: $soft-red;
+	}
+
+	&-active {
+		opacity: 1;
+
+		&::before {
+			width: 35%;
+			transition-delay: 0s;
+		}
+	}
+}

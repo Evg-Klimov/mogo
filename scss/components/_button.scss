@@ -1,0 +1,17 @@
+.btn {
+	font-weight: bold;
+	@include font-size(14);
+	color: $white-color;
+	padding: 12px 25px;
+	font-family: 'montserrat', sans-serif;
+	text-transform: uppercase;
+}
+
+.btn-border {
+	border: 3px solid $white-color;
+}
+
+.btn-bg {
+	background-color: $soft-cyan;
+}
+

@@ -1,0 +1,46 @@
+.map {
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	
+	&__content {
+		position: absolute;
+		z-index: 5;
+		color: $soft-red;
+		transform: translate(-50%, -50%);
+		top: 50%; 
+		left: 50%;
+		text-align: center;
+	}
+	
+	&::before {
+		z-index: 1;
+		background-color: rgba($color: $white-color, $alpha: .7);
+	}		
+
+	&__video-bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: -1;
+	}
+
+	&__title {
+		@include font-size(24);
+		
+		text-transform: uppercase;
+		font-family: 'montserrat', sans-serif;
+		margin: 0;
+	}
+
+	&__line {
+		margin: 20px 0 0;
+	}
+
+	&__icon {
+		@include font-size(32);
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+}

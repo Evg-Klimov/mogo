@@ -1,0 +1,78 @@
+.our-work {
+
+	&__section-title {
+		padding: 100px 15px;
+	}
+}
+
+.gallery {
+
+	@media all and (max-width: 960px) {
+		display: none;
+	}
+
+	&__grid {
+		display: flex;
+		justify-content: center;
+		
+		@media all and (max-width: 1140px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__figure {
+		margin: 0;
+		position: relative;
+
+		&:hover::before {
+			width: 100%;
+		}
+
+		&::before {
+			@include pseudo;
+			top: 0;
+			left: 0;
+			background-image: $gradient;
+			width: 0;
+			height: 100%;
+			transition: width .3s linear;
+		}
+
+		&:hover .gallery__description {
+			opacity: 1;
+			visibility: visible;
+			transition: all .2s ease-in-out .3s;
+		}
+	}
+
+	&__description {
+		@include center-vertically;
+		text-align: center;
+		opacity: 0;
+		visibility: hidden;
+		transition-delay: .1s;
+	}
+
+	&__icon {
+		@include font-size(24);
+		color: $white-color;
+	}
+
+	&__small-title {
+		margin: 15px 0;
+		color: $white-color;
+	}
+
+	&__text {
+		color: $white-color;
+	}
+}
+
+.swiper-container--gallery {
+	max-width: 480px;
+	display: none;
+
+	@media all and (max-width: 960px) {
+		display: block;
+	}
+}

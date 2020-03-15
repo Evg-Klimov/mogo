@@ -1,0 +1,198 @@
+.footer {
+	
+	&__content {
+		padding-top: 74px;
+	}
+
+	&__main-content {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 100px;
+
+		@media all and (max-width: 1150px) {
+			flex-wrap: wrap;
+			margin-bottom: 60px;
+		}
+	}
+
+	&__follow {
+		max-width: 470px;
+
+		@media all and (max-width: 1150px) {
+			max-width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__blogs,
+	&__instagram {
+		@media all and (max-width: 1150px) {
+			width: 50%;
+			text-align: center;
+		}
+
+		@media all and (max-width: 690px) {
+			display: none;
+		}
+	}
+
+	&__title {
+		margin-bottom: 2.5em;
+	}
+
+	&__copyright {
+		text-align: center;
+		padding: 12px 0;
+		border-top: 1px solid #e5e5e5;
+	}
+
+	&__copyright-text {
+		font: normal 14px 'Montserrat', sans-serif;
+		color: $subtitle-color;
+
+		&--color {
+			color: $soft-red;
+		}
+	}
+}
+
+.follow {
+	
+	&__header {
+		border-bottom: 1px solid #e5e5e5;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+	}
+
+	&__logo {
+		font: bold 2.875rem 'montserrat', sans-serif;
+		color: #ccc;
+		margin-bottom: .63em;
+	}
+
+	&__small-title {
+		@include font-size(18);
+		text-transform: initial;
+		margin-top: 1.79em;
+
+		&--font {
+			@include font-size(14);
+			font-weight: normal;
+		}
+	}
+
+
+	&__social-list,
+	&__social-item {
+		display: inline-block;
+	}
+
+	&__social-list {
+		margin-left: 21px;
+		margin-bottom: 38px;
+	}
+
+	&__social-link {
+		padding: 0 4.9px;
+		@include font-size(14);
+	}
+
+
+	&__form-email {
+		padding: 8px 0 10px 12px;
+		border: 1px solid #e7e7e7;
+		border-right: none;
+		font-family: 'roboto', sans-serif;
+		color: $text-color;
+		outline: none;
+		display: inline-block;
+		margin-right: -3px;
+
+		&::placeholder {
+			font: 300 italic 15px 'roboto', sans-serif;
+			color: #ccc;
+		}
+
+		&:focus {	
+			border: 1px solid $hover-color;
+		}
+
+		&:focus:valid {
+			border: 1px solid $soft-cyan;
+		}
+
+		&:focus:invalid {
+			border: 1px solid $soft-red;
+		}
+
+		&:focus:valid,
+		&:focus:invalid,
+		&:focus {
+			border-right: none;
+		}
+	}
+
+	&__form-submit {
+		border: none;
+	}
+}
+
+.blogs {
+
+	&__article {
+		display: flex;
+		align-items: center;
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@media all and (max-width: 1150px) {
+			justify-content: center;
+		}
+	}
+
+	&__article-title {
+		@include font-size(12);
+		max-width: 202px;
+	}
+
+	&__article-header,
+	&__figure {
+		display: inline-block;
+	}
+
+	&__figure {
+		margin: 0 20px 0 0;
+	}
+
+	&__article-date {
+		font: italic 300 13px 'roboto', sans-serif;
+		color: $text-color;
+	}
+}
+
+.instagram {
+
+	&__photo {
+		margin: 0 2px 2px 0;
+	}
+
+	&__gallery {
+		display: flex;
+		max-width: 270px;
+		flex-wrap: wrap;
+		margin-bottom: 15px;
+
+		@media all and (max-width: 1150px) {
+			margin: 0 auto;
+		}
+	}
+
+	&__link {
+		font: italic 300 13px 'roboto', sans-serif;
+		color: $subtitle-color;
+		text-transform: initial;
+	}
+}

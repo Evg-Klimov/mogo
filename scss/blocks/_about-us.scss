@@ -1,0 +1,70 @@
+.about-us {
+
+	&__content {
+		padding: 90px 0 100px 0;
+
+		@media all and (max-width: 768px) {
+			padding: 60px 0 70px 0;
+		}
+	}
+
+	&__section-title {
+		margin-bottom: 100px;	
+	}
+}
+
+.facts {
+	background-color: $soft-cyan;
+	
+	&__conteiner {
+		display: flex;
+		justify-content: space-between;
+
+		@media all and (max-width: 580px) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {
+		flex: 1;
+		padding: 85px 10px;
+		color: $white-color;
+		font-family: 'montserrat', sans-serif;
+		text-align: center;
+		border-right: 1px solid rgba($color: $white-color, $alpha: .3);
+
+		&:first-child {
+			border-left: 1px solid rgba($color: $white-color, $alpha: .3);
+		}
+
+		@media all and (max-width: 768px) {
+			padding: 45px 10px;
+		}
+
+		@media all and (max-width: 580px) {
+			border-right: none;
+			border-bottom: 1px solid rgba($color: $white-color, $alpha: .3);
+			padding: 25px;
+
+			&:first-child {
+				border-left: none;
+			}
+		}
+	}
+
+	&__title {
+		@include font-size(72);
+		margin: 0 0 25px 0;
+
+		@media all and (max-width: 768px) {
+			@include font-size(42);
+		}
+	}
+
+	&__text {
+		margin: 0;
+		text-transform: uppercase;
+		@include font-size(14);
+	}
+}
+

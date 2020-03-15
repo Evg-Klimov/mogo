@@ -1,0 +1,36 @@
+.wrapper-bg {
+	background: 
+		$gradient, 
+		url('../img/background-image/header-bg.jpg') no-repeat center/cover;
+	min-height: 100vh;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 35px;
+	font-family: 'montserrat', sans-serif;
+	margin-bottom: 110px;
+	
+
+	@media all and (max-width: 768px) {
+		flex-direction: column;
+		justify-content: initial;
+		margin-bottom: 100px;
+	}
+}
+
+.logo {
+
+	&__link {
+		@include font-size(30);
+		font-weight: bold;
+		text-transform: initial;
+	}
+
+	@media all and (max-width: 768px) {
+		text-align: center;
+		margin-bottom: 35px;
+	}
+}
+

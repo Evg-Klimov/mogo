@@ -1,0 +1,32 @@
+@import "app/scss/helpers/mixin";
+
+@include font-face(
+  'kaushanscript',
+  '../fonts/kaushanscript/kaushanscript-regular-webfont'
+);
+
+@include font-face(
+  'montserrat',
+  '../fonts/montserrat/bold/montserrat-bold-webfont',
+  bold
+);
+
+@include font-face(
+  'montserrat',
+  '../fonts/montserrat/regular/montserrat-regular-webfont',
+  normal
+);
+
+@include font-face(
+  'roboto',
+	'../fonts/roboto/regular/roboto-regular-webfont',
+  normal
+);
+
+@include font-face(
+  'roboto',
+	'../fonts/roboto/lightitalic/roboto-lightitalic-webfont',
+  300,
+  italic
+);
+

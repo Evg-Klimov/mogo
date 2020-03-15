@@ -1,0 +1,34 @@
+.unique-design {
+	
+	background: url('../img/background-image/enique-design-bg.jpg') no-repeat fixed center/cover;
+	position: relative;
+	
+
+	&__content {
+		padding-top: 105px;
+	}
+	
+	&__conteiner-img {
+		position: relative;
+		@include auto;
+		max-width: 570px;
+
+	}
+
+	&__img {
+
+		&--position {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+
+			@media all and (max-width: 490px) {
+				height: 280px;
+			}
+
+			@media all and (max-width: 320px) {
+				height: 200px;
+			}
+		}
+	}
+}
